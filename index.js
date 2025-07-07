@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 const { Pool } = require("pg");
-const { DATABASE_URL, SECRET_KEY } = process.env;
+const { DATABASE_URL, SECRET_KEY } = import.meta.env;
 
 let app = express();
 app.use(cors());
